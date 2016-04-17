@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    input{
+        width: 200px;
+        height: 30px;
+        padding-left: 10px;
+    }
+</style>
+<body>
+<input type="text" value="中国银行"/>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+//    function a(){
+//        var i=0;
+//        function b(){
+//            alert(++i);
+//        }
+//        return b;
+//    }
+//    var c = a();
+//    c();
+//    c();
+
+
+//    var result=[];
+//    function foo(){
+//        var i = 0;
+//        window.setTimeout(function(){
+//            i =2;
+//        },2000);
+//        for (;i<3;i=i+1){
+//            result[i]=function(){
+//                alert(i)
+//            }
+//        }
+//    };
+//    foo();
+//    result[0](); // 3
+//    result[1](); // 3
+//    result[2](); // 3
+//    window.setTimeout(function(){
+//        result[2]();
+//    },4000)
+
+//var result=[];
+//function foo(){
+//    var i= 0;
+//    for (;i<3;i=i+1){
+//        result[i]=(function(j){
+//            return function(){
+//                alert(j);
+//            };
+//        })(i);
+//    }
+//};
+//foo();
+//result[0](); // 0
+//result[1](); // 1
+//result[2](); // 2
+
+var name = "The Window";
+var object = {
+    name : "My Object",
+    getNameFunc : function(){
+        return function(){
+            return this.name;
+        };
+    }
+};
+//alert(object.getNameFunc()());
+//alert(object.getNameFunc().call(Object));
+
+var name = "The Window";
+var object = {
+    name : "My Object",
+    getNameFunc : function(){
+        var that = this;
+        return function(){
+            return that.name;
+        };
+    }
+};
+//alert(object.getNameFunc()());
+
+//    var x =9;
+//    function Foo(){
+//        this.x =10;
+//    }
+//    var f1 = new Foo();
+//    console.info(x);  //9
+//    console.info(f1.x); //10
+
+var x =0;
+var o = {
+    x : 1,
+    m : function(){
+        console.info(this.x);
+    }
+}
+var o2 ={
+    x:12
+}
+//o.m.apply(); //0
+o.m.apply(o2)
+
+
+
+
+
+
+
+function cat(){}
+cat.prototype={
+    food:"fish",
+    say: function(){
+        alert("I love "+this.food);
+    }
+}
+var blackCat = new cat();
+var whiteDog = {food:"bone"}
+//blackCat.say.call(whiteDog); //I love bone
+
+// (function(){
+//     console.log(arguments instanceof Array); // false
+//     var argsArray = Array.prototype.slice.call(arguments);
+//     console.log(argsArray instanceof Array); // true
+// }());
+
+//    function class1(){
+//        this.name = function(){
+//            alert("class1的方法")
+//        }
+//    }
+//    function class2(){
+//        console.info(this);
+//        class1.call(this);
+//        console.info(this);
+//    }
+//    var c2 = new class2();
+//    c2.name();
+
+
+//    function add(a,b){
+//        alert (a+b);
+//    }
+//    function sub(a,b){
+//        alert(a-b);
+//    }
+//    add.call(1,2);
+
+//    function a(){
+//        var i=0;
+//        function b(){
+//            alert(++i);
+//        }
+//        return b;
+//    }
+//    var c = a();
+//    c();
+//    c();
+
+function repeat (func, times, wait) {
+
+    function timer(a){
+        for(var i=0;i<times;i++){
+            setTimeout(func(a),wait*i);
+        }
+    }
+    return timer;
+}
+var repeatedFun = repeat(alert, 3, 5000);
+//repeatedFun ("hellworld");
+
+
+var a = function () {
+    var test = {x:1};
+    setTimeout(function () {
+        console.log(test);
+    }, 2000);
+    console.log("aa");
+}
+//a();
+
+var obj = function () {
+    var a = '';
+    return {
+        set: function (val) {
+            a = val;
+        },
+        get: function () {
+            return a;
+        }
+    }
+};
+var b = obj();
+b.set('new val');
+//b.get();
+
+</script>
+</html>

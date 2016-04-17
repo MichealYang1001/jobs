@@ -1,0 +1,133 @@
+
+.list-info li {
+    background: #FFF;
+    border-bottom: 1px solid #E3E3E3;
+    font-size: 12px;
+    color: #858586;
+    line-height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.list-info li a.call {
+    display: block;
+    height: 46px;
+    width: 46px;
+    margin: 15px 10px 10px 5px;
+    float: right;
+    padding: 0;
+    position: relative;
+    top: 5px;
+    background: url("../images/tele.png") no-repeat;
+    background-size: cover;
+}
+.list-info li a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    border-radius: 0;
+    padding: 10px;
+}
+.list-info li a {
+    padding: 10px 5px 10px 10px;
+}
+.list-info dl {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.list-info .tit {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+}
+.list-info li a:visited strong {
+    color: #AAAFBA;
+}
+.list-info .tit strong {
+    color: #3F4358;
+    font-size: 15px;
+    font-weight: 700;
+    -webkit-box-flex: 1;
+    display: block;
+}
+.tit.tit1 strong,.tit.tit2 strong{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tit.tit3 strong,.tit.tit4 strong{
+    max-width: 16em;
+}
+.tit.tit2 strong,.tit.tit4 strong{
+    color: #029ee8;
+}
+.list-info .tit b{
+    color: #f00;
+}
+.ico-txt01 {
+    color: #fe6c26;
+    font-weight: 400;
+    font-size: 14px;
+}
+.attr {
+    color: #9FA2A9;
+    font-size: 11px;
+    height: 19px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+.attr .co_name{
+    width: 12em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+}
+.attr .blue_v {
+    background: url("../images/icon_blue_v.png") no-repeat;
+    display: inline-block;
+    width: 45px;
+    height: 19px;
+    background-size: 45px auto;
+    margin-left: 1px;
+}
+.attr .gap{
+    margin: 0 5px;
+    color: #e3e3e3;
+}
+.mr5{
+    margin-right: 5px;
+}
+.dp_xx {
+    width: 87px;
+    height: 15px;
+    display: inline-block;
+    background: url(http://img.58cdn.com.cn/n/tuan/dianpu/star.png) 0 0 no-repeat;
+    background-size: 85px;
+    overflow: hidden;
+    vertical-align: -3px;
+}
+.xx_hp {
+    width: 87px;
+    height: 18px;
+    display: inline-block;
+    background: url(http://img.58cdn.com.cn/n/tuan/dianpu/star.png) 0 -18px no-repeat;
+    background-size: 85px;
+    overflow: hidden;
+    vertical-align: -3px;
+    padding-right: 0!important;
+}
+.list-info li p {
+    color: #7A7E88;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+.mr10 {
+    margin-right: 5px;
+}

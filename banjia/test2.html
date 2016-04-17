@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    console.log(b);
+    (function(){
+//       console.log(a);
+        function a(){
+
+        }
+    })()
+    var b =3;
+
+    var dog = function() {
+        return '汪';
+    };
+    var cat = function(){
+        return '喵';
+    };
+    (function() {
+        if ( cat() === '喵喵' ) {
+            dog = function(){
+                return '汪汪';
+            }
+        }
+        function cat(){
+            return '喵喵';
+        }
+    })();
+
+    for( var i = 0; i < 10; i++ ){
+        setTimeout(function(){
+//            for( var j = 1; j <= i; j++ ){
+//                console.log( dog() );
+//            }
+//            console.info(i);
+        }, 1000 * i );
+    }
+
+
+//闭包
+for(var i = 0 ; i < 10; i++){
+
+    setTimeout((function(a){
+//        console.log(a);
+    })(i), 0);
+
+    setTimeout((
+            function(){
+//                console.log(i);
+            }
+    ), 0);
+}
+
+//var o1 = new c();
+//    console.info(Object.prototype.__proto__);
+//    console.info(o1.__proto__);
+//    console.info(Object instanceof  Function);
+//    console.info(Function instanceof  Object);
+
+    function fn(){
+//        console.log(a);
+    }
+    function bar(f){
+        var a =20;
+        f();
+    }
+    bar(fn);
+    var a =10;
+
+    var log = function(callback){
+        log.count = log.count||0;
+        var count = log.count++;
+        setTimeout(function(){
+            console.log(count);
+            callback&&callback();
+        },100*Math.random());
+    };
+
+log(function(){
+    var f = arguments.callee; if(log.count<100){ log(f);}
+})
+
+//    log(log);
+</script>
+</body>
+</html>
