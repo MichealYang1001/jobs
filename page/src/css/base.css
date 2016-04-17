@@ -1,0 +1,25 @@
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,input,button,textarea,menu{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+*{
+    font-family: 'Microsoft Yahei', 'Simsun', Helvetica, Arial, sans-serif;
+}
+img{border:0;}
+button,input,select,textarea{outline:none;}
+table{border-collapse:collapse;}
+caption,th{text-align:center;font-weight:normal;}
+html,body,img,iframe,input,button{border:0;}
+i{font-style:normal;}
+h1,h2,h3,h4,h5,h6,small,button,input,select,textarea{font-size:100%;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;background:none;}
+h1,em,strong,b{font-weight:bold;}
+h2,h3,h4,h5,h6{font-weight:normal;}
+u,a,a:hover{text-decoration:none;}
+select{background:none;}
+body a{outline:none;}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix{zoom:1;}
+.dn{
+    display: none;
+}

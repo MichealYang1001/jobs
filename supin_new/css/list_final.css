@@ -1,0 +1,814 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    font-size: 62.5%;
+    /*font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;*/
+    font-family:Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+}
+body {
+    line-height:1;
+    font-size: 1.3rem;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+.slide{
+    position: relative;
+    max-width: 640px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+.slide:after{
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 50%;
+}
+.slide ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide li{
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 解决js阻塞页面显示首屏 */
+.slide li:first-child{
+    z-index: 1;
+}
+.slide li img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.slide .dot{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 5;
+    font-size: 0;
+}
+.slide .dot span{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-left: 5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.slide .dot .cur{
+    background-color: #fff;
+}
+
+
+
+
+
+header nav{
+    position: relative;
+}
+header nav img{
+    width: 100%;
+    height: 100%;
+}
+.headerwraper{
+    position: absolute;
+    top: 26%;
+    width: 96%;
+    margin-left: 4%;
+    height: 45%;
+}
+.logoimg{
+    width: 17%;
+    height: 100%;
+    float: left;
+}
+.headerwraper img {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+}
+.headerright{
+    width: 80%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.headerright div:nth-child(1){
+    height: 45%;
+}
+.headerright div:nth-child(2){
+    height: 35%;
+}
+.headerright div:nth-child(3){
+    height: 20%;
+}
+.headerright div:nth-child(1) span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.headerright div:nth-child(2) span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #c8d6da;
+}
+.headerright div:nth-child(3) span {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #eef2f3;
+}
+.huafeihongbao{
+    color: #d9534f;
+}
+/*.headerright i{
+    background: url("http://img.58cdn.com.cn/job/img/sp/calendar.png") no-repeat 0 0;
+    width: 14px;
+    height: 14px;
+    background-size: 100%;
+    display: inline-block;
+    bottom: 0px;
+    position: absolute;
+}*/
+
+.icon_font_rili {
+    font-family: "iconfont" !important;
+    font-size: 1.2rem;
+    color: #f0ad4e;
+    display: block;
+    position: absolute;
+    font-style: normal;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-font-smoothing: antialiased;
+    bottom: 1px;
+}
+
+.headerright div {
+    padding-left: 12px;
+}
+.header_center_content{
+
+}
+.header_bottom_content{
+
+}
+.header_bottom_content span{
+    position: absolute;
+    bottom: 0px;
+    padding-left: 14px;
+}
+.round{width:16px;height:16px;display: inline-block;font-size:20px;line-heigth:16px;text-align:center;color:black;text-decoration:none}
+
+header nav span {color: white;}
+
+body{background-color: #ffffff;}
+
+.temptation_title{
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 25px;
+    position: relative;
+    border-bottom: 2px solid #f1f1f1;
+}
+.temptation_title h2{
+    color: #333333;
+    position: absolute;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #00aee1;
+    margin-left: 4%;
+}
+.temptation_content{margin: 15px 0 15px 12%;}
+.temptation_content  ul{width: 100%;}
+.temptation_content ul li {    font-size: 1.3rem;
+    list-style-type: disc;
+    list-style-position: outside;
+    height: 34px;
+    line-height: 34px;
+}
+
+.temptation_content span {
+    font-size: 100%;
+}
+section hr{width: 92%;margin:0 auto;border-bottom: 2px dotted #cdcdcd;}
+.weixinhr i {
+    background: url("http://img.58cdn.com.cn/job/img/sp/weixintubiao.png") no-repeat;
+    width: 16px;
+    height: 15px;
+    background-size: 100%;
+    display: inline-block;
+}
+.welfare{
+    overflow: hidden;
+    margin-top: 24px;
+    padding-left: 8%;
+    margin-bottom: 18px;
+}
+.welfare span{
+    display: block;
+    padding: 0 6px;
+    height: 26px;
+    border: 1px solid #ccc;
+    float: left;
+    color: #8e8e93;
+    font-size: 1.2rem;
+    line-height: 26px;
+    margin-right: 2%;
+    margin-bottom: 6px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.weixinhr{
+    font-size: 1.5rem;
+    margin-left: 4%;
+    margin-bottom: 20px;
+}
+.weixinhr span{
+    padding-left: 8px;
+    font-size: 1.3rem;
+    color: #8e8e93;
+}
+section.office_environment{margin-top: 70px;}
+.basicinfo_section{  
+
+}
+.basicinfo{
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    color: #333333;
+    border-bottom: 2px solid #f1f1f1;
+}
+.basicinfo  h2{
+    height: 30px;
+    float: left;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #00aee1;
+    margin-left: 4%;
+}
+.basicinfocontent {
+    margin-top: 20px;
+}
+
+.basicinfocontent p:nth-child(5){
+    position: relative;
+}
+
+
+.basicinfocontent p span{
+    height: 25px;
+    font-size: 1.3rem;
+    line-height: 25px;
+    vertical-align: middle;
+}
+.basicinfocontent p span:first-child{
+    margin-left: 8%;
+}
+.basicinfocontent p span:nth-child(2){
+    margin-left: 1%;
+}
+#jobdutycontent_render {
+    font-size: 1.3rem;
+}
+.basicinfocontent p:nth-last-child(1){
+        height: auto;
+    padding-left: 8%;
+    text-indent: -7%;
+    padding-right: 5%;
+}
+.jobduty {
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.3rem;
+    color: #333333;
+    margin-top: 20px;
+    border-bottom: 2px solid #f1f1f1;
+}
+.jobduty h2{
+    height: 30px;
+    float: left;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #00aee1;
+    margin-left: 4%;
+}
+.jobdutycontent {
+        padding-left: 8%;
+    padding-right: 4%;
+    line-height: 25px;
+    font-size: 1.3rem;
+    margin-top: 18px;
+}
+.company_profile {
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    color: #333333;
+    margin-top: 20px;
+    border-bottom: 2px solid #f1f1f1;
+}
+.company_profile h2{
+    height: 30px;
+    float: left;
+    font-size: 1.5rem;    
+    border-bottom: 2px solid #00aee1;
+    margin-left: 4%;
+}
+.company_profile_content{
+    padding-left: 8%;
+    padding-right: 4%;
+    line-height: 25px;
+    margin-top: 18px;
+}
+.company_profile_content p{
+    font-size: 1.3rem;
+}
+
+.office_environment {
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    color: #333333;
+    margin-top: 20px;
+    border-bottom: 2px solid #f1f1f1;
+}
+.office_environment h2{
+    height: 30px;
+    float: left;
+    font-size: 1.5rem;    
+    border-bottom: 2px solid #00aee1;
+    margin-left: 4%;
+}
+.office_environment_section{
+    margin: 0 0 68px 0;
+    z-index: 2;
+}
+.office_environment_content{
+    line-height: 25px;
+    margin-top: 28px;
+}
+.office_environment_content p{
+    font-size: 1.3rem;
+}
+.office_environment_content img{
+    width:100%;
+}
+.apply {
+    width: 100%;
+    height: 58px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.tel_ask{
+        width: 40%;
+    display: inline-block;
+    background-color: #e4f3f8;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 58px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00aee1;
+}
+.online_apply{
+       width: 60%;
+    display: inline-block;
+    background-color: #00aee1;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 58px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.tel_ask_i {
+        background: url("http://img.58cdn.com.cn/job/img/sp/tel.png");
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    display: inline-block;
+    top: 4px;
+    position: relative;
+}
+.online_apply_i {
+        background: url("http://img.58cdn.com.cn/job/img/sp/online.png");
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    display: inline-block;
+    top: 4px;
+    position: relative;
+}
+.info_key{
+    color: #8e8e93;
+}
+.info_value{}
+
+.optimization_position{
+        width: 50%;
+    height: 58px;
+    float: left;
+    color: black;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    line-height: 58px;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+.all_position{
+    width: 50%;
+    height: 58px;
+    float: left;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #ffffff;
+    vertical-align: middle;
+    line-height: 58px;
+    font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+/*.current_choosed,.optimization_position,.all_position{
+    border-bottom: 2px solid #00aee1;
+}*/
+.current_choosed {
+    border-bottom: 3px solid #00aee1;
+}
+.job_position_nav{
+    overflow: hidden;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.notavailable{
+            width: 100%;
+    height: 116px;
+    border: 1px solid #dcdcdc;
+    margin: 4px 0;
+    text-align: center;
+    padding-top: 38px;
+    box-sizing: border-box;
+}
+.notavailable span {
+    font-size: 1.1rem;
+    color: #9fa0a0;
+}
+.job_position_section{
+        background-color: #efeff4;
+    height: 114px;
+    padding: 4px 0;
+}
+.job_body,.employmentrecord {
+    background-color: #efeff4;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('http://img.58cdn.com.cn/webfonts/sp/iconfont.eot'); /* IE9*/
+    src: url('http://img.58cdn.com.cn/webfonts/sp/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('http://img.58cdn.com.cn/webfonts/sp/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('http://img.58cdn.com.cn/webfonts/sp/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('http://img.58cdn.com.cn/webfonts/sp/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family: "iconfont" !important;
+    font-size: 1.8rem;
+    color: #11b3e3;
+    font-style: normal;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-font-smoothing: antialiased;
+}
+.notavailable i{
+        background: url("http://img.58cdn.com.cn/job/img/sp/magnifyingglass.png") no-repeat;
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    padding-top: 12px;
+
+}
+.otherre_commendations{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    color: #00aee1;
+    padding-left: 3%;
+    display: block;
+    box-sizing: border-box;
+}
+.otherre_commendations i {
+    background: url("http://img.58cdn.com.cn/job/img/sp/somepraise.png") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: 100%;
+}
+.detail_inner_span span.innerspan {
+    margin-right: 1%;
+    text-align: center;
+    height: 24px;
+    margin-bottom: 6px;
+    padding: 0 5px;
+    line-height: 24px;
+    display: inline-block;
+    border: 1px solid #ebebeb;
+    color: #8e8e93;
+    font-size: 1.1rem;
+}
+
+.divspan{
+    padding: 15px 0;
+}
+.divspan span{
+
+}
+.item {
+    background-color: #ffffff;
+    padding-left: 6%;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    margin-top: 8px;
+}
+.itemtitle img {
+        width: 41px;
+    height: 41px;
+    background-size: 100%;
+    float: left;
+}
+.itemtitle {
+    padding: 10px 0;
+    overflow: hidden;
+}
+.itemcontent_tittle {
+        display: block;
+    font-size: 1.75rem;
+}
+.itemcontent {
+        float: left;
+    padding: 3px 8px;
+    height: 41px;
+    box-sizing: border-box;
+}
+.itemcontent_content {
+    color: #8e8e93;
+    font-size: 1.3rem;
+    margin-left: 4px;
+}
+.itemcontent_company {
+    color: #8e8e93;
+    font-size: 1.3rem;
+    padding-top: 3px;
+    display: block;
+}
+.itemdetail {
+    margin-bottom: 15px;
+}
+.itemdetail div{
+    margin: 3px 0;
+}
+.itemdetail div span {
+    font-size: 1.3rem;
+    padding-left: 3px;
+    color: #333333;
+}
+.zenghuafei{
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #484848;
+}
+.zenghuafei i.iconfont {
+    color: #d9534f;
+}
+.bgdiv{
+    z-index: 1000000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: rgba(102, 102, 102, .6);
+}
+.dialog {
+    width: 80%;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%; 
+    margin: 0 auto;
+    z-index: 10000;
+    -webkit-transform: translate(-50%,-50%);
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #eeeeee;
+}
+.dialog_footer,.dialog_footer_onebutton {
+    overflow: hidden;
+    border-top: 1px solid #b2b2b2;
+}
+.dialog_footer a,.dialog_footer_onebutton a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    float: left;
+    height: 43px;
+    text-align: center;
+    font-size: 1.75rem;
+    box-sizing: border-box;
+    line-height: 43px;
+}
+.dialog_footer a:first-child {
+    border-right: 1px solid #b2b2b2;
+    width: 50%;
+}
+.dialog_footer a:last-child {
+    color: #00aee1;
+    width: 50%;
+}
+.dialog_footer_onebutton a{
+    width: 100%;
+    color: #00aee1;
+}
+.dialog_header {
+    padding: 15px 0 5px;
+    text-align: center;
+    color: #333333;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.dialog_content {
+        padding: 15px 5px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #333333;
+}
+.other_content{
+    text-align: center;
+    padding: 5px 0 15px 0;
+    font-size: 1.1rem;
+    transform:scale(0.9);
+    color: #8e8e93;
+}
+.other_content span {
+        color: #ed5555;
+    display: inline-block;
+}
+.other_content a {
+        color: #333333;
+    display: block;
+    margin-top: 11px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.other_content i{
+        background: url("http://img.58cdn.com.cn/job/img/sp/tel_call_btn.png") no-repeat 0 0;
+    width: 45px;
+    height: 45px;
+    margin-top: 26px;
+    background-size: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.scheme_one{display: none;}
+.scheme_two{display: none;}
+.scheme_three{display: none;}
+
+.iconmap {
+    position: absolute;
+    bottom: 5px;
+    font-size: 1.6rem;
+}
+
+
+.pageturning {
+        width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border: 1px solid #dcdcdc;
+}
+.pageturningleft{
+        width: 40%;
+    float: left;
+    color: #00aee1;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.pageturningcenter{
+    width: 20%;
+    float: left;
+    text-align: center;
+    color: #8e8e93;
+}
+.pageturningright{
+    width: 40%;
+    float: left;
+    color: #00aee1;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.iconfont_promotion{
+    color: #d9534f;
+}
+.iconfont_promotion span {
+    color: #d9534f;
+}

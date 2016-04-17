@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="email=no"/>
+	<meta name="format-detection" content="address=no;">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<style type="text/css">.delete{display:none;}</style>
+	<script type="text/javascript" src="./js/zepto.min.js"></script>
+</head>
+<body class="employmentrecord">
+	<!-- <header>
+		<nav class="job_position_nav">
+			<div class="optimization_position current_choosed">
+				进行中
+			</div>
+			<div class="all_position">
+				已完结
+			</div>
+		</nav>
+		<section class="job_position_section" style="display:block;">
+			<div class="notavailable">
+				<i></i>
+				<span>暂无相关招聘</span>
+			</div>
+		</section>
+	</header> -->
+	<ul id="items">
+	  <li>List item 1 <span class=delete>DELETE</span></li>
+	  <li>List item 2 <span class=delete>DELETE</span></li>
+	</ul>
+	<script type="text/javascript">
+		$(function(){
+			// show delete buttons on swipe
+			$('#items li').swipe(function(){
+				alert("hi")
+			  $('.delete').hide()
+			  $('.delete', this).show()
+			});
+			// delete row on tapping delete button
+			$('.delete').tap(function(){
+			  $(this).parent('li').remove()
+			});
+		});
+	</script>
+</body>
+</html>
