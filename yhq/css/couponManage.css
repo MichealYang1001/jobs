@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+img{display: block;}
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","Microsoft YaHei";}
+input::-moz-focus-inner { border:none; padding:0; }
+select, input { vertical-align:middle; }
+select, input, textarea { font-size:12px; margin:0; }
+input[type="text"], input[type="password"], textarea { outline-style:none; -webkit-appearance:none; }
+textarea { resize:none; }
+table { border-collapse:collapse; }
+body { color:#333; padding:5px 0; font: 12px/1.2 arial,Tahoma,"SimSun",sans-serif; background:#fff; }
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+.clearit { clear:both; height:0; font-size:0; overflow:hidden; }
+a { color:#0078b6; text-decoration:none; }
+a:visited { color:#0078b6; }
+a:hover, a:active, a:focus { color:#FF0000; text-decoration:underline; }
+.fl {float:left;}
+.fr {float:right;}
+.text-l{ text-align:left;}
+.text-c{ text-align:center;}
+.text-r{ text-align:right;}
+/*font color*/
+.c-red{ color:#ff0000;}
+.c-green{ color:#009900; }
+.c-888{ color:#888;}
+.c-999{ color:#999;}
+.c-999{ color:#999;}
+.c-06c{ color:#0066cc;}
+/*边距*/
+.mart20{ margin-top:20px;}
+
+.w{ width:960px; margin:0 auto;}
+.hide{ display:none;}
+
+/**/
+.mycoupons{ position:relative;}
+a.howcoupons{ position:absolute; right:10px; top:8px; color:#ff0000;}
+.tabbtn-irregular{ margin-left:10px; height:36px; position:relative; margin-bottom:-1px;}
+.tabbtn-irregular span{ display:block; float:left; height:36px; line-height:36px; width:110px; padding-right:16px; text-align:center; background:url(http://pic2.58.com/ds/jingzhun/rcbtn.png) no-repeat; font-size:14px; color:#fff; font-weight:bold; cursor:pointer; margin-left:-10px; position:relative; cursor:pointer;}
+.tabbtn-irregular span.current{ background-position:0 -37px; color:#e00000; z-index:101;}
+.tabbtn-irregular span{}
+.tabbtn-irregular .z13{ z-index:13;}
+.tabbtn-irregular .z12{ z-index:12;}
+.tabbtn-irregular .z11{ z-index:11;}
+.mycoupons .bd{ border:1px solid #ccc; clear:both; padding:20px; height:100%;}
+
+/*table*/
+.table{ text-align:center;}
+.table td{}
+.table thead td{ padding:7px 10px; border-bottom:1px solid #d7d8db;}
+.table tbody td{ color:#585858; padding:10px; border-bottom:1px dashed #d7d8db;}
+
+/*分页*/
+#page{font-family:Arial; padding:2px 0; font-size:12px; height:20px; clear:both;}
+#page .pagecon{float:right; }
+#page .pg{ float:left;  margin-left:5px;}
+#page .pg a,#page .pn a { display:inline-block; padding:0px 6px; line-height:18px;text-align:center;font-family:Tahoma; border:1px solid #dee3e7;background-color:#fff; white-space:nowrap; text-decoration:none; font-size:12px}
+#page .pg a:hover,#page .pn a:hover{ border:1px solid #fd7a0e;background-color:#fd7a0e;color:#fff;} 
+#page .pn{ float:left; padding:0px 6px; margin-left:5px; line-height:18px;text-align:center;font-family:Tahoma; border:1px solid #fd7a0e;background-color:#fd7a0e;color:#fff; font-weight:bold}
+#page .pn a {color:#fff; font-weight:bold}
+
+/*new pop*/
+body {_background-image: url(about:blank); _background-attachment: fixed;}
+.poplayer .hd,.poplayer .close{ background:url(http://jingzhun.58.com/css/../images/bg.gif) no-repeat;}
+.poplayer{ left: 50%; margin-left: -256px; position: absolute; top:0; width: 500px; z-index: 9999; background: #FFF;border-radius: 6px; display:none;}
+.poplayer .hd{ height:40px; line-height:40px; background-position:0 -300px; background-repeat:repeat-x; padding:0 10px; overflow:hidden;}
+.poplayer .close{ height:18px; width:18px; background-position:0 -342px; display:block; float:right; cursor:pointer; text-indent:-9999px; margin-top:10px;}
+.poplayer .hd h3{ float:left; font-size:14px;}
+.poplayer .hd h3 span{ font-size:12px; font-weight:normal; margin-left:10px; color:#888;}
+.poplayer .bd{}
+#masklayer{background-color:#000000; display:none; height:100%; left:0; opacity:0.5; filter:alpha(opacity:50); position:fixed; top:0; width:100%; z-index: 998; _position:absolute;_top: expression(documentElement.scrollTop + "px");}
+
+.addcoupon{ max-height:169px; overflow:hidden; overflow-y:auto;_height:expression(this.scrollHeight > 169 ? "169px" : "auto"); margin:20px 20px 15px;}
+.addcoupon table{ *width:443px;}
+.couponstable{ margin-bottom:10px;}
+.couponstable td{ border-bottom:1px dashed #bbb; height:36px; line-height:36px; padding:0 10px; color:#666; text-align:center;}
+.couponstable thead td{ color:#333;}
+.couponstable .xx{ text-align:left;}
+.delcoupon{ cursor:pointer; display:inline-block; height:16px; width:16px; overflow:hidden; background:url(../images/ico-coupons.gif) no-repeat 0 -30px;}
+.czcoupons{ color:#666; padding:0 20px; margin-bottom:20px; position: absolute; bottom: 95px;}
+.czcoupons .title{ font-size:12px; font-weight:normal; color:#0266cc; margin:0 0 12px 10px; cursor:pointer;}
+.czcoupons .title b{ display: inline-block; height: 9px; width: 9px; margin-right:5px; vertical-align: middle; background: url(../images/ico-jj.gif) no-repeat -9px 0;}
+.czcoupons .title b.on{ background-position: 0 0;}
+.czcoupons .con{ display:none; padding-left:28px;}
+.czcoupons input{ vertical-align:middle;}
+.czcoupons .inp{ height:20px; line-height:20px; width:145px; padding:0 5px; border-left:1px solid #f5f5f5; border-top:1px solid #cfcfcf; border-bottom:1px solid #eee; border-right:none; font-size:12px;}
+.czcoupons .inp.error{ background:#fff5f5; border:1px solid #ec7373;}
+.czcoupons .btn{ background:#f5f5f5; border:1px solid #ccc; padding:0 5px; height:22px; cursor:pointer; color:#000;}
+.tjcoupons{ border-top:1px solid #ededed; background:#fafafa; padding:15px 30px; font-size:14px; }
+.tjcoupons input{ margin-left:70px;}
+.ico-quan{ display:inline-block; height:21px; width:30px; background:url(../images/ico-quan.gif) no-repeat;}
+.ico-new{ color:#47b200; font-size:10px; margin-left:5px;}
+
+/*form 元素*/
+.btn-enter-new,.btn-reset-new{ padding:0 20px; height:31px; font-size:14px; background:url(http://pic2.58.com/ds/jingzhun/newbtn.png) repeat-x; cursor:pointer;}
+.btn-enter-new{ background-position:0 0; border:1px solid #355792; color:#fff; font-weight:bold;}
+.btn-reset-new{ background-position:0 -32px; border:1px solid #b2b2b2;}
+
+/*面包屑*/
+.path{ color:#666; padding:0 0 20px 0;}
+.path cite{ margin:0 6px; font-family:Verdana, Geneva, sans-serif;}
+
+
+.txt-l{ width:260px; text-align:left;}
+.noteread{color:#aaa;font-size:12px; margin:40px 0 50px 0; padding:0px 0 0 10px; line-height:24px;}
+.noteread b{ background:url("http://pic2.58.com/ui6/my/images/use-icon-2.gif?version=201258") no-repeat; font-size:12px;font-weight:bold;color:#666;background-position:0 -66px;background-position:0 -66px\0;*background-position:0 -68px;_background-position:0 -68px;padding:0 0 0 18px;}
+.noteread span{ margin:0 5px; }
+.linksize{font-size:14px}
+.alltop{ height:28px; background:#fff; border-bottom:1px solid #D7D8DB; }
+.alltop td{ line-height:28px; padding:0 10px; text-align: center;}
+.pos-f {}
+.pos-f .alltop{ position:fixed;width:443px;}
+.pos-f .table{margin-top:30px;}
+
+body{ padding: 0;}
+.usecoupons{ height:300px; padding-bottom: 70px; position:relative; overflow: hidden;}
+.usecoupons .tjcoupons{ position: absolute; bottom:0; width:440px;}
+.c-sel{cursor:pointer;}
+.pos-f .alltop{ _position:absolute;}
+
+/*卡券激活*/
+.couponActivate{
+    color: #666;
+    padding-left: 17px;
+}
+.couponActivate span{
+    display: inline-block;
+    margin-right: 5px;
+}
+.couponActivate input{
+    width: 330px;
+    *width: 340px;
+    border: 1px solid #ccc;
+    height: 28px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.couponActivate-btn{
+    background: #f88a00;
+    background:-moz-linear-gradient(top, #f67c00, #fb9700);
+    background:-webkit-linear-gradient(to top,#f67c00, #fb9700);
+    background: linear-gradient(to top,#f67c00, #fb9700);
+    -webkit-box-shadow: inset 0 0 1px #fea733;
+    -moz-box-shadow: inset 0 0 1px #fea733;
+    box-shadow: inset 0 0 1px #fea733;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 72px;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-left: 18px;
+}
+.couponCtgTab{
+    padding-left: 12px;
+    margin-top: 35px;
+    border-bottom: 1px solid #d5dce1;
+}
+.couponCtgTab span{
+    display: inline-block;
+    width: 68px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #d5dce1;
+    text-align: center;
+    color: #1d50e1;
+    margin:0 5px -1px 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.couponCtgTab span.current{
+    color: #000;
+    border-bottom-color: white;
+}
+.couponStateTab{
+    padding-left: 17px;
+    margin-top: 10px;
+}
+.couponStateTab span{
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.couponStateTab span.current{
+    background: #0063cf;
+    color: #FFFFFF;
+}
+.table{
+    text-align: left;
+    margin-top: 20px;
+}
+.table thead td{
+    padding:8px 10px;
+    border-bottom:1px solid #d7d8db;
+    background: #fafafa;
+}
+.table tbody td{ color:#585858; padding:10px; border-bottom:1px dashed #d7d8db;}
+.table tbody tr:last-child td{
+    border-bottom-style: solid;
+}
+.c-red {
+    color: #ff0000;
+}

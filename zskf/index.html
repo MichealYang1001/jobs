@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <title>我的客服</title>
+    <link rel="stylesheet" href="css/base.css"/>
+</head>
+<script src="http://j1.58cdn.com.cn/crop/supin/pcsite/js/libs/jquery.min.js"></script>
+<script>
+    var fontsize=function () {
+        var W=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                defaultW=640,
+                defaultSize = 20;
+        if (W > defaultW) W = defaultW;
+        if (W < 320) W = 320;
+        document.getElementsByTagName('html')[0].style.fontSize = (W / defaultW * defaultSize).toFixed(2) + 'px';
+    }
+    onresize = fontsize;
+    fontsize();
+    $(function(){
+        $(".btn").on("click",function(){
+            $(".mask").show();
+            $(".popup").show();
+        })
+        $(".close").on("click",function(){
+            $(".mask").hide();
+            $(".popup").hide();
+        })
+    })
+</script>
+<body>
+<div class="head">
+    <div class="portrait">
+        <img src="images/head.png" alt=""/>
+    </div>
+    <div class="name">韩小悠</div>
+    <div class="desc">我的专属客服</div>
+</div>
+<div class="btns">
+    <div class="btn phone"><i></i>4007-585-858</div>
+    <div class="btn qq"><i></i>1113412234</div>
+</div>
+<div class="mask"></div>
+<div class="popup">
+    <div class="close">关闭</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的优惠券</title>  
+<script type="text/javascript">document.domain = '58.com'; </script>
+<link type="text/css" rel="stylesheet" href="css/couponManage.css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/couponManage.js"></script>
+<script>   
+$(function() {
+    getCouponList(1);
+//    修改
+//	clickSwitch(".tabbtn-irregular span",".mycoupons .hide",0,0);
+    clickSwitch(".couponCtgTab span", ".mycoupons .hide", 0, 0);
+    clickSwitch(".couponStateTab span", ".mycoupons .hide", 0, 0);
+    $(".couponCtgTab span").click(function () {
+        $(".couponStateTab span").eq(0).addClass('current').siblings().removeClass('current');
+    });
+
+    function getCouponList(pageIndex) {
+    var couponType = $("#couponCtgTab>.current").attr('data-value');
+    var state = $("#couponStateTab>.current").attr('data-value');
+    var userId = $("#logInUserId").val();
+    var data = {
+                "pageIndex": pageIndex,
+                "state": state,
+                "type": couponType
+            };
+    console.log(data);
+    }
+    getCouponList(1);    
+});
+$(function(){
+    var t=true;
+    $(".message").click(function(){
+        $(".one").show();
+    });
+    $(".two").click(function(){
+        $(".one").hide();
+    });
+});
+</script>
+<style type="text/css">
+    .message{
+        position: absolute;   
+        right: 130px;   
+        top: 8px;   
+        color: #0000ff;
+    }
+    .one{
+        position: absolute;   
+        width: 240px;   
+        height: 140px;   
+        right: 130px;   top: 25px;   
+        background: #ffffff;
+        display: none;
+        border: solid 1px #e3e3e3;
+    }
+    .two{
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top:10px;
+        right: 10px;
+        z-index: 9999999;
+        background-image: url("/images/close_one.png");
+    }
+    .three_input{
+        position: absolute;
+        top: 43px;
+        left: 75px;
+        _top:38px;
+        *top: 38px;
+    }
+    .li_one{
+        list-style: none;
+        position: absolute;
+        left: 95px;
+        top: 40px;
+        font-size: 14px;
+        color: #494e5a;
+    }
+    #page {
+        font-family: "宋体";
+        padding: 2px 0;
+        font-size: 12px;
+        height: 42px;
+        clear: both;
+        line-height: 42px;
+        text-align: center;
+        /*修改*/
+        /*background: #fafafa;*/
+        color: #585858;
+    }
+    #page a:hover{
+        color: #e96c1f;
+    }
+</style>
+</head>
+
+<body>
+<input type="hidden" value="" id="coupon_AdSource"/>
+<div class="mycoupons" id="myCouponManage">
+    <!--之前的代码，不知道有什么作用，放在这-->
+	<div class="one">
+        <div class="two"><img src="/images/close_one.png"></div>
+                <input type="checkbox" id="couponRemind" onclick="couponRemind('19038220884487')" class="three_input" checked="checked" >
+                <ul>
+            <li class="li_one">优惠劵过期提醒</li>
+        </ul>
+    </div>
+    <input type="hidden" value="19038220884487" id="logInUserId"/>
+    <div class="path"><a href="#" onclick="toMy58();">我的58</a><cite>&gt;</cite>优惠券包</div>
+    <div class="couponActivate">
+        <span>卡券激活</span><input type="text" id="couponPwd" name="couponPwd" class="" placeholder="请输入优惠券密码" autocomplete="off"><span class="couponActivate-btn">激活</span>
+    </div>
+    <div class="couponCtgTab">
+        <span class="current" data-value="0">打折券</span><span value="1">满减券</span><span value="3">现金券</span>
+    </div>
+    <div class="couponStateTab">
+        优惠券状态：<span value="0">未使用</span><span value="1">已使用</span><span value="3">已过期</span>
+    </div>
+    <!--删除begin-->
+	<!--<div id="couponStateTab" class="tabbtn-irregular clearfix"><span class="current z11" value="0">未使用</span><span class="z12" value="1">已使用</span><span class="z13" value="3">已过期</span></div>-->
+    <!--删除end-->
+    <a href="http://about.58.com/344.html" target="_Blank" class="howcoupons">如何使用优惠券[？]</a>
+
+    <!--打折券未使用-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>折扣</td>
+                    <td>使用产品</td>
+                    <td>使用类别</td>
+                    <td>使用平台</td>
+                    <td>使用时间</td>
+                    <td>有效期</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ZK12345abcde</td>
+                    <td><span class="c-red">7.5折</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车</td>
+                    <td>PC、无线</td>
+                    <td>星期三、四</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                <tr>
+                    <td>ZK12345abcde</td>
+                    <td><span class="c-red">7.5折</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车、招聘等</td>
+                    <td>PC</td>
+                    <td>12:00-15:00</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--打折券已使用-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>折扣</td>
+                    <td>抵扣金额</td>
+                    <td>使用时间</td>
+                    <td>使用说明</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ZK12345abcde</td>
+                    <td><span class="c-red">7.5折</span></td>
+                    <td>30元</td>
+                    <td>2016年03月01日</td>
+                    <td>使用该优惠券到智能</td>
+                </tr>
+                <tr>
+                    <td>ZK12345abcde</td>
+                    <td><span class="c-red">7.5折</span></td>
+                    <td>30元</td>
+                    <td>2016年03月01日</td>
+                    <td>使用到信息编号为21134348934152的餐饮-精准</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--打折券已过期-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>折扣</td>
+                    <td>使用产品</td>
+                    <td>使用类别</td>
+                    <td>使用平台</td>
+                    <td>使用时间</td>
+                    <td>过期时间</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ZK12345abcde</td>
+                    <td><span class="c-red">7.5折</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车</td>
+                    <td>PC、无线</td>
+                    <td>星期三、四</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                <tr>
+                    <td>ZK12345abcde</td>
+                    <td><span class="c-red">7.5折</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车、招聘等</td>
+                    <td>PC</td>
+                    <td>12:00-15:00</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--满减券未使用-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>满减规则</td>
+                    <td>使用产品</td>
+                    <td>使用类别</td>
+                    <td>使用平台</td>
+                    <td>使用时间</td>
+                    <td>有效期</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>MJ12345abcde</td>
+                    <td><span class="c-red">满100元减30元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车</td>
+                    <td>PC、无线</td>
+                    <td>星期三、四</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                <tr>
+                    <td>MJ12345abcde</td>
+                    <td><span class="c-red">满1000元减1元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车、招聘等</td>
+                    <td>PC</td>
+                    <td>12:00-15:00</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--满减券已使用-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>满减规则</td>
+                    <td>使用时间</td>
+                    <td>使用说明</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>MJ12345abcde</td>
+                    <td><span class="c-red">满30元减10元</span></td>
+                    <td>2016年03月01日</td>
+                    <td>使用该优惠券到智能</td>
+                </tr>
+                <tr>
+                    <td>ZK12345abcde</td>
+                    <td><span class="c-red">满200元减30元</span></td>
+                    <td>2016年03月01日</td>
+                    <td>使用到信息编号为21134348934152的餐饮-精准</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--满减券已过期-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>满减规则</td>
+                    <td>使用产品</td>
+                    <td>使用类别</td>
+                    <td>使用平台</td>
+                    <td>使用时间</td>
+                    <td>过期时间</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>MJ12345abcde</td>
+                    <td><span class="c-red">满100元减20元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车</td>
+                    <td>PC、无线</td>
+                    <td>星期三、四</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                <tr>
+                    <td>MJ12345abcde</td>
+                    <td><span class="c-red">满100元减20元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车、招聘等</td>
+                    <td>PC</td>
+                    <td>12:00-15:00</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--现金券未使用-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>面值</td>
+                    <td>使用产品</td>
+                    <td>使用类别</td>
+                    <td>使用平台</td>
+                    <td>使用时间</td>
+                    <td>有效期</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>XJ12345abcde</td>
+                    <td><span class="c-red">10元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车</td>
+                    <td>PC、无线</td>
+                    <td>星期三、四</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                <tr>
+                    <td>XJ12345abcde</td>
+                    <td><span class="c-red">40元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车、招聘等</td>
+                    <td>PC</td>
+                    <td>12:00-15:00</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--现金券已使用-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>面值</td>
+                    <td>使用时间</td>
+                    <td>使用说明</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>XJ12345abcde</td>
+                    <td><span class="c-red">30元</span></td>
+                    <td>2016年03月01日</td>
+                    <td>使用该优惠券到智能</td>
+                </tr>
+                <tr>
+                    <td>XJ12345abcde</td>
+                    <td><span class="c-red">40元</span></td>
+                    <td>2016年03月01日</td>
+                    <td>使用到信息编号为21134348934152的餐饮-精准</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--打折券已过期-->
+    <div class="" id="myCouponList">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                <thead>
+                <tr>
+                    <td>优惠券密码</td>
+                    <td>面值</td>
+                    <td>使用产品</td>
+                    <td>使用类别</td>
+                    <td>使用平台</td>
+                    <td>使用时间</td>
+                    <td>过期时间</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>XJ12345abcde</td>
+                    <td><span class="c-red">50元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车</td>
+                    <td>PC、无线</td>
+                    <td>星期三、四</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                <tr>
+                    <td>XJ12345abcde</td>
+                    <td><span class="c-red">60元</span></td>
+                    <td>置顶</td>
+                    <td>搬家、租车、招聘等</td>
+                    <td>PC</td>
+                    <td>12:00-15:00</td>
+                    <td>2016年03月01日</td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="page" class="mart20"><span class="pagecon">
+    <span class="pg"><a href="#">首页</a></span>
+    <span class="pg"><a href="#">上一页</a></span>
+    <input type="hidden" value="2">
+                                    <span class="pn" onclick="getCouponList('1')">1</span>
+                                            <span class="pg"><a href="#" onclick="getCouponList('2')">2</a></span>
+
+        <span class="pg"><a href="#" onclick="getPre('1','next')">下一页</a></span>
+    <span class="pg"><a href="#" onclick="getCouponList('2')">尾页</a></span>
+    </span>
+            </div>
+        </div>
+    </div>
+
+    <!--删除提示begin-->
+        <!--<div class="noteread">-->
+    <!--<p> <b>特别提示：</b></p>-->
+    <!--<p> 1、当您购买在线产品结算时，在订单确认页面可以选择（或输入）您的优惠券密码，获得相应的优惠。</p>-->
+    <!--<p> 2、优惠券有不同的类型，如仅限某在线产品、某类别使用的优惠券等。</p> -->
+    <!--<p> 3、请注意：优惠券是有过期时间的哦！请在过期之前使用。</p>-->
+    <!--<p> 4、使用优惠券提交的订单，若发生取消，优惠券不予返还。</p>-->
+    <!--<p> 5、单张优惠券只能使用一次，不可拆分，不找零。</p>-->
+<!--</div>-->
+    <!--删除提示end-->
+
+</div>
+</body>
+</html>

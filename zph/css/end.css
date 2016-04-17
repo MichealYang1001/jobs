@@ -1,0 +1,15 @@
+.top{
+    height: 10px;
+    background-color: #efeff4;
+}
+.main img{
+    display: block;
+    margin: 81px auto 117px;
+    height: 204px;
+}
+.footer{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #999;
+    line-height: 27px;
+}
