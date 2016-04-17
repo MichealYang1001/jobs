@@ -1,0 +1,176 @@
+body{
+    background: url("../img/bj.png") no-repeat #c2bac9;
+    background-size: cover;
+    color: #333;
+    height: 100%;
+}
+@font-face {
+    font-family: iconfont;
+    src: url(../fonts/iconfont.eot);
+    src: url(../fonts/iconfont.eot?#iefix) format('embedded-opentype'),url(../fonts/iconfont.woff) format('woff'),url(../fonts/iconfont.ttf) format('truetype'),url(../fonts/iconfont.svg#iconfont) format('svg')
+}
+.content{
+    color: #ffffff;
+    padding-top: 3%;
+    position: absolute;
+    width: 100%;
+}
+header h1{
+    line-height: 2;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 700;
+}
+header img{
+    width: 130px;
+    left: 50%;
+    margin-left: -65px;position: relative;
+}
+.main ul{
+    width: 76%;
+    margin: 0 auto;
+}
+.main ul li{
+    position: relative;
+    line-height: 45px;
+    height: 45px;
+    padding-top: 6px;
+    border-bottom: 1px solid #ffffff;
+}
+.main li i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+.iconfont {
+    font-family: iconfont!important;
+    font-size: 1.6rem;
+    color: #fff;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.main input{
+    width: 85%;
+    margin-left: 10px;
+    height: 35px;
+    color: #ffffff;
+}
+.main .sending{
+    border-bottom: none;
+}
+.sending:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 65%;
+    border-bottom: 1px solid #fff;
+}
+.main ul .sending input{
+    width: 55%;
+}
+.main ul .sending a{
+    background-color: rgba(0,0,0,.1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    padding-top: 1px;
+    width: 75px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+    border-radius: 3px;
+}
+footer{
+    padding-top: 10%;
+}
+footer a{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #00aee1;
+    position: relative;
+    margin-left: -100px;
+    left: 50%;
+    border-radius: 5px;
+}
+.pop_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+}
+.pop_content{
+    position: fixed;
+    width: 270px;
+    height: 202px;
+    top: 45%;
+    left: 50%;
+    margin: -101px 0 0 -135px;
+    border-radius: 8px;
+    background: #e1e1e1;
+}
+.tel_content{
+    height: 158px;
+    padding: 0 12px;
+    border-bottom: 1px solid #b2b2b2;
+}
+.tel_content .hastel{
+    margin-top: 2px;
+    display: inline-block;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+#newTel{
+    width: 246px;
+    margin: 10px 0 10px;
+}
+#autCode{
+    width: 138px;
+}
+.telInput{
+    background-color: #fff;
+    color: #000;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding-left: 3px;
+}
+#sendAC{
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 5px;
+    /*float: right;*/
+    width: 98px;
+    text-align: center;
+    background-color: #00aee1;
+    font-size: 1.4rem;
+    font-family: "ºÚÌå";
+    color: #fff;
+}
+.tel_footer{
+    display: -webkit-box;
+}
+.telSub{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    height: 44px;
+    font-size: 1.7rem;
+    color: #00aee1;
+}
+#cancelTel{
+    border-right: 1px solid #b2b2b2;
+}

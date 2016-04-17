@@ -1,0 +1,285 @@
+/*头部begin*/
+.header{
+    width: 100%;
+    position: relative;
+}
+.header img{
+    width: 100%;
+    height: 100%;
+}
+.header_wrapper{
+    position: absolute;
+    margin-left: 4%;
+    top:30%;
+    height: 45%;
+    width: 96%;
+}
+.company_logo{
+    float: left;
+    height: 100%;
+    width: 16.6%;
+}
+.interview_brief{
+    float: left;
+    height: 100%;
+    width: 83%;
+}
+.position_name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+.interview_brief div{
+    padding-left: 12px;
+}
+.interview_brief div:nth-child(1){
+    height: 40%;
+}
+.interview_brief div:nth-child(2){
+    height: 35%;
+}
+.interview_brief div:nth-child(3){
+    height: 25%;
+}
+.position_company span{
+    font-size: 1.1rem;
+    color: #bccbd1;
+}
+.round{
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 14px;
+    background-color: #bccbd1;
+    position: relative;
+    top: -1px;
+}
+.icon_font_rili{
+    -webkit-text-stroke-width: .2px;
+    -webkit-font-smoothing: antialiased;
+    z-index: 12;
+    display: block;
+    font-family: iconfont!important;
+    font-size: 1.5rem;
+    color: #f0ad4e;
+    position: absolute;
+    bottom: 0;
+    font-style: normal;
+}
+.calender{
+    position: absolute;
+    display: inline-block;
+    background: url("../img/calender.png") no-repeat center center;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+    bottom: 0;
+}
+.interview_time span{
+    font-size: 1.1rem;
+    position: absolute;
+    bottom:0;
+    padding-left: 18px;
+    color: #ffffff;
+}
+/*头部end*/
+/*岗位诱惑begin*/
+.temptation_title{
+    margin-top: 20px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-left: 4%;
+    width: 96%;
+}
+.temptation_title h1{
+    position: absolute;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #00aee1;
+}
+.temptation_list{
+    margin: 15px 0 15px 12%;
+}
+.temptation_list ul li{
+    font-size: 1.3rem;
+    list-style: disc outside;
+    line-height: 26px;
+}
+.temptation_list ul li span{
+    /* font-size: 100%; */
+}
+.huafei{
+    color: #d9534f;
+}
+.temptation_hr{
+    display: block;
+    border: 0;
+    border-bottom: 1px dashed #cdcdcd;
+    width: 92%;
+    margin: 0 auto;
+    height: 1px;
+}
+.temptation_welfare{
+    padding-left: 8%;
+    margin: 20px 0 18px;
+}
+.temptation_welfare span{
+    display: inline-block;
+    color: #8e8e93;
+    height: 26px;
+    line-height: 23px;
+    padding: 0 6px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 2% 6px 0;
+}
+.weixin_share{
+    margin: 0 0 25px 4%;
+}
+.weixin_share i{
+    width: 16px;
+    height: 15px;
+    display: inline-block;
+    background: url("../img/weixintubiao.png") no-repeat;
+    background-size: 100%;
+}
+.weixin_share span{
+    color: #8e8e93;
+    margin-left: 8px;
+    font-size: 1.3rem;
+    display: inline-block;
+}
+/*岗位诱惑end*/
+/*基本信息begin*/
+.basicinfo_title,.duties_title,.company_title{
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #f1f1f1;
+}
+.basicinfo_title h1,.duties_title h1,.company_title h1{
+    float: left;
+    margin-left: 4%;
+    border-bottom: 2px solid #00aee1;
+    height: 30px;
+    font-size: 1.5rem;
+}
+.basicinfo_content{
+    padding: 0 1% 0 8%;
+    margin-top: 20px;
+}
+.basicinfo_content p{
+    line-height: 25px;
+}
+p span{
+    font-size: 1.3rem;
+}
+p .content_key{
+    color: #8e8e93;
+}
+p .content_value{
+    margin-left: 2%;
+}
+
+/*基本信息end*/
+/*职位详情*/
+.duties_content,.company_content{
+    padding:0 4% 0 8%;
+    margin-top: 18px;
+}
+.duties_content p,.company_content p{
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+/*公司简介*/
+.content_attribute{
+    border-left: 2px solid #c7c7cd;
+    margin-bottom: 15px;
+    height: 34px;
+    position: relative;
+}
+.attribute_name{
+    /*position: absolute;*/
+    font-size: 1.5rem;
+    margin-left: 8px;
+    display: block;
+    /*top: 1px;*/
+}
+.attribute_other{
+    margin-top: 6px;
+    /*position: absolute;*/
+    font-size: 1.3rem;
+    margin-left: 8px;
+    display: block;
+    color: #8e8e93;
+    /*top: 1px;*/
+}
+/*办公环境*/
+.environment{
+    margin-bottom: 50px;
+}
+.environment_title{
+    border-bottom: 2px solid #f1f1f1;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 30px;
+}
+.environment_title h1{
+    border-bottom: 2px solid #00aee1;
+    font-size:1.5rem;
+    float: left;
+    margin-left: 4%;
+}
+.environment_content{
+    margin-top: 28px;
+    padding: 0 8%;
+}
+.slide{
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.slide:after {
+    content: '';
+    display: block;
+    /* width: 100%; */
+    padding-top: 50%;
+}
+.slide ul,.slide ul li,.slide li img{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.apply{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 43px;
+    line-height: 43px;
+    z-index: 100;
+}
+.apply a{
+    text-decoration: none;
+    float: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.tele{
+    width: 40%;
+    color: #00aee1;
+    background-color: #e4f3f8;
+}
+.online{
+    width: 60%;
+    color: #fff;
+    background-color: #00aee1;
+}
+

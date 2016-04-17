@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+    <title>完善资料</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+</head>
+<body>
+<div class="content">
+    <header>
+        <h1>完善您的基本档案</h1>
+        <img src="img/tit_img.png" alt=""/>
+    </header>
+    <div class="main">
+        <ul>
+            <li><i class="iconfont">&#xe60b;</i><input placeholder="联系电话" type="text"/></li>
+            <li class="sending"><i class="iconfont">&#xe607;</i><input placeholder="验证码" type="text"/><a href="javascript:void(0)">发送验证码</a></li>
+            <li><i class="iconfont">&#xe606;</i><input placeholder="您的姓名" type="text"/></li>
+            <li><i class="iconfont">&#xe608;</i><input placeholder="您期望的工作城市" type="text"/></li>
+            <li><i class="iconfont">&#xe615;</i><input placeholder="您期望的岗位" type="text"/></li>
+        </ul>
+    </div>
+    <footer>
+        <a href="javascript:">提交</a>
+    </footer>
+</div>
+<div class="popup_code">
+    <div class="pop_bg"></div>
+    <div class="pop_content">
+        <div class="tel_content">
+            <span class="hastel">该手机号已有档案，请直接输入验证码</span>
+            <input type="tel" id="newTel" class="telInput" placeholder="请输入新的手机号码"/>
+            <input type="number" id="autCode" class="telInput" placeholder="请输入验证码"/>
+            <a href="javascript:void(0);" id="sendAC">发送验证码</a>
+        </div>
+        <div class="tel_footer">
+            <a href="javascript:void(0)" id="cancelTel" class="telSub">更换手机号</a>
+            <a href="javascript:void(0)" class="telSub">确认</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
