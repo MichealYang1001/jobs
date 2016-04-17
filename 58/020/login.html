@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+<div id="top">
+    <div class="wrapper">
+        <span>咨询电话：400-858-3509</span><span class="gap">|</span><a href="myOrder.html">我的订单</a><span class="gap">|</span><a href="login.html">登录</a><span>&nbsp;/&nbsp;</span><a href="register.html">注册</a>
+    </div>
+</div>
+<div id="nav">
+    <div class="wrapper">
+        <div class="logo">
+            <a href=""><img src="images/logo.png" alt=""/></a>
+            <h1>企业服务</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="icReg.html">工商注册</a></li>
+                <li><a href="agent.html">代理记账</a></li>
+                <li><a href="icChange.html">工商变更</a></li>
+                <li><a href="freeCh.html">免费换照</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="title"><i></i>用户登录</div>
+    <div class="info">
+        <div class="info-way">
+            <span class="selected" data-attr="1">手机验证登录</span><span data-attr="2">58账号登录</span>
+        </div>
+        <div class="info-form">
+            <div class="method">
+                <div class="input-wrapper">
+                    <input type="tel" class="tel" id="tel-login" maxlength="11" placeholder="请输入11位手机号码"/>
+                    <div onselectstart="return false" class="delete hide"></div>
+                    <div class="tips hide">请输入11位正确的手机号码</div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" maxlength="4" class="code" id="code-login" placeholder="请输入手机验证码"/>
+                    <span class="codeBtn" id="sendVC-login">获取验证码</span>
+                    <div onselectstart="return false" class="delete hide"></div>
+                    <div class="tips hide">请输入正确的验证码</div>
+                </div>
+            </div>
+            <div class="method hide">
+                <div class="input-wrapper">
+                    <input type="text" class="tel" id="username-login" placeholder="用户名&nbsp;/&nbsp;邮箱&nbsp;/&nbsp;手机号码"/>
+                    <div onselectstart="return false" class="delete hide"></div>
+                    <div class="tips hide">请输入登录用户名</div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" class="password" maxlength="30" id="password-login" placeholder="密码"/>
+                    <div onselectstart="return false" class="delete hide"></div>
+                    <div class="tips hide">请输入密码</div>
+                </div>
+            </div>
+        </div>
+        <div class="loginBtn" id="loginBtn">登&nbsp;&nbsp;录</div>
+        <div class="regNow">
+            <label for="remember" class="remember"><input type="checkbox" checked class="checkbox hide" id="remember"> <i class="check-icon check-on"></i>记住我</label>
+            <a href="register.html">还没有账号，<span>立即注册？</span></a>
+        </div>
+    </div>
+</div>
+<div class="footer-login">
+    京ICP备14022439号-1&nbsp;&nbsp;京公网安备11010802015816号
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/Jplaceholder.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
